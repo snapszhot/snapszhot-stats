@@ -1,0 +1,37 @@
+.table {
+    margin: 0;
+    max-width: 350px;
+    width: 100%;
+
+    th,
+    td {
+        background-clip: padding-box; // fix Firefox bug
+        padding: var(--spacing-quarter) var(--spacing-third);
+        text-align: center;
+
+        &:first-of-type {
+            text-align: left;
+        }
+    }
+
+    th {
+        border-bottom: 1px solid #cccccc;
+        color: var(--color-dark-grey);
+        font-size: var(--font-size-small);
+        font-weight: var(--font-weight-sans-medium);
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: #fafafa;
+            }
+        }
+    }
+
+    td {
+        border-bottom: 1px solid var(--color-light-grey);
+        font-feature-settings: 'tnum';
+        font-variant-numeric: tabular-nums;
+    }
+}

@@ -1,0 +1,13 @@
+.container {
+    margin-bottom: var(--spacing-single);
+}
+
+.stat {
+    display: flex;
+}
+
+.statTitle {
+    color: var(--color-dark-grey);
+    font-weight: var(--font-weight-sans-bold);
+    margin-right: var(--spacing-half);
+}

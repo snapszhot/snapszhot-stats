@@ -1,0 +1,56 @@
+.container {
+    margin-bottom: var(--spacing-double);
+}
+
+.chart {
+    border: 1px solid var(--color-light-grey);
+    border-radius: 4px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    grid-column-gap: 5px;
+    height: 300px;
+    padding: var(--spacing-half) var(--spacing-half) 2rem;
+
+    [class*='bar']:nth-child(odd) {
+        // background-color: #ff4136;
+        background-color: var(--color-dark-grey);
+    }
+
+    [class*='bar']:nth-child(even) {
+        // background-color: #0074d9;
+        background-color: var(--color-dark-grey);
+    }
+
+    [class*='bar'] {
+        border-radius: 5px 5px 0 0;
+        background-color: #ff4136;
+        grid-row-start: 1;
+        grid-row-end: 101;
+        position: relative;
+        transition: all 600ms ease;
+
+        .barCaption {
+            background-color: var(--color-white);
+            bottom: -24px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+        }
+    }
+
+    $totalRows: 101;
+
+    @mixin chartValue($data) {
+        $result: $totalRows - $data;
+        grid-row-start: $result;
+    }
+
+    @for $i from 1 through $totalRows {
+        .bar-#{$i} {
+            @include chartValue($i);
+        }
+    }
+}

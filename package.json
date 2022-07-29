@@ -1,0 +1,47 @@
+{
+    "name": "snapszhot-stats",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "release": "dotenv -e .env.local release-it"
+    },
+    "dependencies": {
+        "@prismicio/client": "^6.6.3",
+        "@supabase/supabase-js": "^1.35.4",
+        "classnames": "^2.3.1",
+        "luxon": "^3.0.1",
+        "next": "^12.2.3",
+        "prop-types": "^15.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "dotenv-cli": "^6.0.0",
+        "eslint": "^8.20.0",
+        "eslint-config-next": "^12.2.3",
+        "eslint-config-prettier": "^8.5.0",
+        "sass": "^1.54.0"
+    },
+    "release-it": {
+        "git": {
+            "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs",
+            "commitMessage": "Releasing v${version}",
+            "tagName": "v${version}"
+        },
+        "github": {
+            "release": true,
+            "releaseName": "v${version}",
+            "tokenRef": "GITHUB_TOKEN"
+        },
+        "hooks": {
+            "after:bump": "npx auto-changelog -p --template changelog-template.hbs"
+        },
+        "npm": {
+            "publish": false
+        }
+    }
+}
