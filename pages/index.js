@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
-import queryStats from '@lib/api/query-stats'
+import { queryStatsByDay } from '@lib/api/query-stats'
 
 import { StatsByDay } from '@components/views'
 
@@ -18,7 +18,7 @@ HomePage.propTypes = {
 
 export async function getStaticProps() {
     try {
-        const fallback = await queryStats()
+        const fallback = await queryStatsByDay()
 
         return {
             props: {

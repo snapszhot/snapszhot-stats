@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { SWRConfig } from 'swr'
-import queryStats from '@lib/api/query-stats'
+import { queryStatsByDay } from '@lib/api/query-stats'
 import queryMovies from '@lib/prismic'
 
 import { StatsByDay } from '@components/views'
@@ -19,7 +19,7 @@ DayPage.propTypes = {
 
 export async function getStaticProps({ params }) {
     try {
-        const fallback = await queryStats(params.day)
+        const fallback = await queryStatsByDay(params.day)
 
         return {
             props: {

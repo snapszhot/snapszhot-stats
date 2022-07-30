@@ -2,13 +2,12 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import useSWR from 'swr'
 
-import StatsByDay from './StatsByDay'
+import StatsByDate from './StatsByDate'
 
-const fetcher = async (url, day) => {
+const fetcher = async url => {
     try {
-        const baseURL = '/api/statsByDay'
-        const endpoint = day ? `${baseURL}?day=${day}` : baseURL
-
+        const [, year, month, day] = url.split('/')
+        const endpoint = `/api/statsByDate?year=${year}&month=${month}&day=${day}`
         const { data } = await axios.get(endpoint)
 
         return data
@@ -18,8 +17,8 @@ const fetcher = async (url, day) => {
 }
 
 export default function StatsWithSWR() {
-    const { asPath, query } = useRouter()
-    const { data } = useSWR([asPath, query?.day], fetcher, {
+    const { asPath } = useRouter()
+    const { data } = useSWR(asPath, fetcher, {
         refreshInterval: 30000, // Check for new data every 30 seconds
     })
 
@@ -27,5 +26,5 @@ export default function StatsWithSWR() {
         return null
     }
 
-    return <StatsByDay {...data} />
+    return <StatsByDate {...data} />
 }

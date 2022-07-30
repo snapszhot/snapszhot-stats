@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 
-import { BarChart, BasicStats, Layout, RawLogs } from '@components/common'
-import styles from './StatsByDay.module.scss'
+import {
+    BarChart,
+    BasicStats,
+    Layout,
+    PageTitle,
+    RawLogs,
+} from '@components/common'
 
 export default function StatsByDay({
     day,
@@ -10,11 +15,11 @@ export default function StatsByDay({
     subtitle,
     ...props
 }) {
+    const pageTitle = `DAY ${day}: ${subtitle}`
+
     return (
-        <Layout day={day} subtitle={subtitle} {...props}>
-            <h1 className={styles.title}>
-                DAY {day}: {subtitle}
-            </h1>
+        <Layout day={day} pageTitle={pageTitle} {...props}>
+            <PageTitle title={pageTitle} />
             <BasicStats {...stats} />
             <BarChart
                 data={stats.winsByFrame}

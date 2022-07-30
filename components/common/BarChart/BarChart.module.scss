@@ -8,7 +8,6 @@
     border: 1px solid var(--color-light-grey);
     border-radius: 4px;
     display: grid;
-    grid-template-columns: 10px repeat(6, 1fr);
     grid-template-rows: repeat(100, 1fr);
     grid-column-gap: 5px;
     height: 300px;
@@ -37,6 +36,7 @@
         .barCaption {
             background-color: var(--color-white);
             bottom: -24px;
+            font-size: 10px;
             left: 0;
             position: absolute;
             right: 0;
@@ -73,11 +73,15 @@
     }
 }
 
+.xAxisLabel,
+.yAxisLabel {
+    font-weight: var(--font-weight-sans-medium);
+    position: absolute;
+}
+
 .xAxisLabel {
     bottom: -32px;
-    font-weight: var(--font-weight-sans-medium);
     left: 0;
-    position: absolute;
     right: 0;
     text-align: center;
 }
@@ -86,8 +90,6 @@
     align-items: center;
     bottom: 0;
     display: flex;
-    font-weight: var(--font-weight-sans-medium);
-    position: absolute;
     top: 0;
     left: -38px;
 

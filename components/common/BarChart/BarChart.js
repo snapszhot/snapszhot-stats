@@ -43,16 +43,20 @@ Labels.propTypes = {
 }
 
 export default function BarChart({ data, title, total, xAxis, yAxis }) {
+    const chartStyles = {
+        gridTemplateColumns: `10px repeat(${data.length}, 1fr)`,
+    }
+
     return (
         <section className={styles.container}>
             <SectionTitle title={title} />
-            <ul className={styles.chart}>
+            <ul className={styles.chart} style={chartStyles}>
                 <Labels xAxis={xAxis} yAxis={yAxis} />
                 <YAxisTicks total={total} />
                 {data.map((entry, index) => (
                     <Bar
-                        caption={index + 1}
-                        entry={entry}
+                        caption={entry.label}
+                        entry={entry.value}
                         total={total}
                         key={index}
                     />
