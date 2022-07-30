@@ -24,7 +24,7 @@
     tbody {
         tr {
             &:nth-child(even) {
-                background-color: #fafafa;
+                background-color: var(--color-off-white);
             }
         }
     }

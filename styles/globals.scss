@@ -1,6 +1,7 @@
 :root {
     --box-shadow-input: 0 1px 0 1px rgba(0, 0, 0, 0.04);
     --color-white: #ffffff;
+    --color-off-white: #fafafa;
     --color-lightest-grey: #f1f1f1;
     --color-light-grey: #e1e1e1;
     --color-medium-grey: #979797;
@@ -32,6 +33,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --color-white: #222222;
+        --color-off-white: #333333;
         --color-lightest-grey: #545454;
         --color-light-grey: #979797;
         --color-dark-grey: #e1e1e1;
