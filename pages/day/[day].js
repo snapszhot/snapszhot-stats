@@ -34,6 +34,7 @@ export async function getStaticProps({ params }) {
                 resultData: data,
                 stats,
             },
+            revalidate: 60,
         }
     } catch (error) {
         return {

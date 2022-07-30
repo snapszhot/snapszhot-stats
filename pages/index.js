@@ -30,6 +30,7 @@ export async function getStaticProps() {
                 stats,
                 subtitle,
             },
+            revalidate: 60,
         }
     } catch (error) {
         return {
