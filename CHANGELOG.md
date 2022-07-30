@@ -1,7 +1,11 @@
 # Changelog
 
-## [v1.1.1](https://github.com/skilar/snapszhot-stats/compare/v1.1.0...v1.1.1)
+## [v1.1.2](https://github.com/skilar/snapszhot-stats/compare/v1.1.1...v1.1.2)
 
+- Show time in raw game log [`c297d55`](https://github.com/skilar/snapszhot-stats/commit/c297d55ac4a9af8f24ea0007eb0adcbe1e35480f)
+## [v1.1.1](https://github.com/skilar/snapszhot-stats/compare/v1.1.0...v1.1.1) (30 July 2022)
+
+- Releasing v1.1.1 [`8083d70`](https://github.com/skilar/snapszhot-stats/commit/8083d7005c60f97135d3cf398a31ea074d5483f1)
 - Fix chart label [`412f8b4`](https://github.com/skilar/snapszhot-stats/commit/412f8b4ad97de507fd608ae4e9d0c8a7110fd1e5)
 ## [v1.1.0](https://github.com/skilar/snapszhot-stats/compare/v1.0.2...v1.1.0) (30 July 2022)
 
