@@ -1,7 +1,11 @@
 # Changelog
 
-## [v1.0.1](https://github.com/skilar/snapszhot-stats/compare/v1.0.0...v1.0.1)
+## [v1.0.2](https://github.com/skilar/snapszhot-stats/compare/v1.0.1...v1.0.2)
 
+- Add page revalidation [`671558c`](https://github.com/skilar/snapszhot-stats/commit/671558c465e65512ffe86e25172b995de160bb48)
+## [v1.0.1](https://github.com/skilar/snapszhot-stats/compare/v1.0.0...v1.0.1) (30 July 2022)
+
+- Releasing v1.0.1 [`057eb84`](https://github.com/skilar/snapszhot-stats/commit/057eb847fc3720d4082888f315878a211fb995bd)
 - Fix dark mode colors [`bd41607`](https://github.com/skilar/snapszhot-stats/commit/bd4160763b08533b3958a6b5fcc162c8a46c42d8)
 ## v1.0.0 (30 July 2022)
 
