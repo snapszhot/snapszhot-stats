@@ -8,7 +8,7 @@ function LogItem({ created_at, frame_won, isDate, puzzle_id, won }) {
     const date = DateTime.fromISO(created_at)
     const formattedDate = isDate
         ? date.toLocaleString(DateTime.TIME_SIMPLE)
-        : date.toLocaleString()
+        : date.toLocaleString(DateTime.DATETIME_SHORT)
 
     return (
         <tr>
