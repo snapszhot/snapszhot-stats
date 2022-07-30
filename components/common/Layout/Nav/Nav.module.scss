@@ -10,15 +10,3 @@
         }
     }
 }
-
-.icon {
-    fill: var(--color-not-black);
-    height: 16px;
-    transition: all 300ms ease;
-    vertical-align: middle;
-    width: 16px;
-
-    &:hover {
-        fill: var(--color-medium-grey);
-    }
-}
