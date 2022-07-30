@@ -1,11 +1,10 @@
 .container {
-    margin-bottom: var(--spacing-double);
+    margin-bottom: var(--spacing-single);
 }
 
 .chart {
     border: 1px solid var(--color-light-grey);
     border-radius: 4px;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(100, 1fr);

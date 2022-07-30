@@ -1,1 +1,1 @@
-export { default as TodaysPuzzle } from './TodaysPuzzle'
+export { default as StatsByDay } from './StatsByDay'

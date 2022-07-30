@@ -5,8 +5,22 @@
     width: 100%;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .title {
     display: block;
     font-weight: var(--font-weight-sans-bold);
     margin-bottom: var(--spacing-single);
+}
+
+.titleLink {
+    color: var(--color-not-black);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

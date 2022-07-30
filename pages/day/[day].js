@@ -8,14 +8,17 @@ export default function HomePage(props) {
     return <StatsByDay {...props} />
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
     try {
-        const { day, subtitle } = await queryMovies()
+        const [post, mostRecentDay] = await Promise.all([
+            queryMovies(1, parseInt(params.day)),
+            queryMovies(),
+        ])
         const { data, error } = await supabase
             .from('analytics')
             .select('*')
             .order('created_at', { ascending: true })
-            .eq('puzzle_id', day)
+            .eq('puzzle_id', params.day)
 
         if (error) {
             throw error
@@ -25,10 +28,11 @@ export async function getStaticProps() {
 
         return {
             props: {
-                day,
+                ...post,
+                mostRecentDay: mostRecentDay.day,
+                pageTitle: `DAY ${post.day}: ${post.subtitle}`,
                 resultData: data,
                 stats,
-                subtitle,
             },
         }
     } catch (error) {
@@ -37,5 +41,21 @@ export async function getStaticProps() {
                 error,
             },
         }
+    }
+}
+
+export async function getStaticPaths() {
+    const posts = await queryMovies(100)
+    const paths = posts.map(post => {
+        return {
+            params: {
+                day: post.data.day.toString(),
+            },
+        }
+    })
+
+    return {
+        paths,
+        fallback: false,
     }
 }
