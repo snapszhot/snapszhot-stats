@@ -1,7 +1,13 @@
 # Changelog
 
-## [v1.0.2](https://github.com/skilar/snapszhot-stats/compare/v1.0.1...v1.0.2)
+## [v1.1.0](https://github.com/skilar/snapszhot-stats/compare/v1.0.2...v1.1.0)
 
+- Add stats by date [`e0aba19`](https://github.com/skilar/snapszhot-stats/commit/e0aba19c3efb9b8f5860165249fb2e2d032d5d13)
+- Add SWR to homepage and day pages [`5b0d4ff`](https://github.com/skilar/snapszhot-stats/commit/5b0d4ffe8931d1e64d2ee99de9590c8b4a289dca)
+- Add labels to BarChart [`529e7ad`](https://github.com/skilar/snapszhot-stats/commit/529e7ad98a690e16073788536f1b5f2231cae86a)
+## [v1.0.2](https://github.com/skilar/snapszhot-stats/compare/v1.0.1...v1.0.2) (30 July 2022)
+
+- Releasing v1.0.2 [`2578fb3`](https://github.com/skilar/snapszhot-stats/commit/2578fb3d7cbea5fb426e14ce18248cfb3042b642)
 - Add page revalidation [`671558c`](https://github.com/skilar/snapszhot-stats/commit/671558c465e65512ffe86e25172b995de160bb48)
 ## [v1.0.1](https://github.com/skilar/snapszhot-stats/compare/v1.0.0...v1.0.1) (30 July 2022)
 
