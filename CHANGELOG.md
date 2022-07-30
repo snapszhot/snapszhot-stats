@@ -1,6 +1,9 @@
 # Changelog
 
-## [v1.1.0](https://github.com/skilar/snapszhot-stats/compare/v1.0.2...v1.1.0)
+## [v1.1.1](https://github.com/skilar/snapszhot-stats/compare/v1.1.0...v1.1.1)
+
+- Fix chart label [`412f8b4`](https://github.com/skilar/snapszhot-stats/commit/412f8b4ad97de507fd608ae4e9d0c8a7110fd1e5)
+## [v1.1.0](https://github.com/skilar/snapszhot-stats/compare/v1.0.2...v1.1.0) (30 July 2022)
 
 - Add stats by date [`e0aba19`](https://github.com/skilar/snapszhot-stats/commit/e0aba19c3efb9b8f5860165249fb2e2d032d5d13)
 - Add SWR to homepage and day pages [`5b0d4ff`](https://github.com/skilar/snapszhot-stats/commit/5b0d4ffe8931d1e64d2ee99de9590c8b4a289dca)
