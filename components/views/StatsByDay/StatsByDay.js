@@ -26,7 +26,7 @@ export default function StatsByDay({
                 title='Wins by Frame'
                 total={stats.wins}
                 xAxis='Frame'
-                yAxis='Games'
+                yAxis='Wins'
             />
             <RawLogs resultData={resultData} />
         </Layout>
