@@ -6,11 +6,13 @@ import { useRouter } from 'next/router'
 import Nav from './Nav'
 import styles from './Layout.module.scss'
 
-export default function Layout({ children, pageTitle, ...props }) {
+export default function Layout({ children, day, subtitle, ...props }) {
     const { asPath } = useRouter()
+    const isHomepage = asPath === '/'
+
     const siteTitle = 'SNAPSЖOT STATS'
-    const title = pageTitle ? `${pageTitle} - ${siteTitle}` : siteTitle
-    const showLink = asPath !== '/'
+    const pageTitle = day ? `DAY ${day}: ${subtitle}` : 'Archive'
+    const title = isHomepage ? siteTitle : `${pageTitle} - ${siteTitle}`
 
     return (
         <div className={styles.container}>
@@ -19,7 +21,7 @@ export default function Layout({ children, pageTitle, ...props }) {
             </Head>
             <header className={styles.header}>
                 <span className={styles.title}>
-                    {showLink ? (
+                    {!isHomepage ? (
                         <Link href='/'>
                             <a className={styles.titleLink}>{siteTitle}</a>
                         </Link>
@@ -27,7 +29,7 @@ export default function Layout({ children, pageTitle, ...props }) {
                         <>{siteTitle}</>
                     )}
                 </span>
-                <Nav {...props} />
+                <Nav day={day} {...props} />
             </header>
             <main>{children}</main>
         </div>
@@ -36,5 +38,6 @@ export default function Layout({ children, pageTitle, ...props }) {
 
 Layout.propTypes = {
     children: PropTypes.node,
-    pageTitle: PropTypes.string,
+    day: PropTypes.number,
+    subtitle: PropTypes.string,
 }

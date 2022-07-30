@@ -1,1 +1,1 @@
-export { default } from './StatsByDay'
+export { default } from './StatsWithSWR'

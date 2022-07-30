@@ -6,7 +6,7 @@ export default function ArchivePage(props) {
     return <Archive {...props} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [rawPosts, mostRecentDay] = await Promise.all([
         getAllMovies(),
         queryMovies(),
@@ -17,8 +17,6 @@ export async function getStaticProps() {
         props: {
             posts,
             mostRecentDay: mostRecentDay.day,
-            pageTitle: 'Archive',
         },
-        revalidate: 120,
     }
 }

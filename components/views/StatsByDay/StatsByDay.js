@@ -11,7 +11,7 @@ export default function StatsByDay({
     ...props
 }) {
     return (
-        <Layout day={day} {...props}>
+        <Layout day={day} subtitle={subtitle} {...props}>
             <h1 className={styles.title}>
                 DAY {day}: {subtitle}
             </h1>

@@ -1,34 +1,30 @@
-import supabase from '@lib/supabase-client'
-import queryMovies from '@lib/prismic'
-import getStats from '@lib/get-stats'
+import PropTypes from 'prop-types'
+import { SWRConfig } from 'swr'
+import queryStats from '@lib/api/query-stats'
 
 import { StatsByDay } from '@components/views'
 
-export default function HomePage(props) {
-    return <StatsByDay {...props} />
+export default function HomePage({ fallback, ...props }) {
+    return (
+        <SWRConfig value={{ fallback }}>
+            <StatsByDay {...props} />
+        </SWRConfig>
+    )
+}
+
+HomePage.propTypes = {
+    fallback: PropTypes.object,
 }
 
 export async function getStaticProps() {
     try {
-        const { day, subtitle } = await queryMovies()
-        const { data, error } = await supabase
-            .from('analytics')
-            .select('*')
-            .order('created_at', { ascending: true })
-            .eq('puzzle_id', day)
-
-        if (error) {
-            throw error
-        }
-
-        const stats = getStats(data)
+        const fallback = await queryStats()
 
         return {
             props: {
-                day,
-                resultData: data,
-                stats,
-                subtitle,
+                fallback: {
+                    ['/']: fallback,
+                },
             },
             revalidate: 60,
         }
