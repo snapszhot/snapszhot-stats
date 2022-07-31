@@ -4,10 +4,10 @@ import { queryStatsByDay } from '@lib/api/query-stats'
 
 import { StatsByDay } from '@components/views'
 
-export default function HomePage({ fallback, ...props }) {
+export default function HomePage({ fallback }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <StatsByDay {...props} />
+            <StatsByDay />
         </SWRConfig>
     )
 }

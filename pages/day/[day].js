@@ -5,10 +5,10 @@ import queryMovies from '@lib/prismic'
 
 import { StatsByDay } from '@components/views'
 
-export default function DayPage({ fallback, ...props }) {
+export default function DayPage({ fallback }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <StatsByDay {...props} />
+            <StatsByDay />
         </SWRConfig>
     )
 }

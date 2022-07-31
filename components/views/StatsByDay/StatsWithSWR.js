@@ -4,8 +4,9 @@ import useSWR from 'swr'
 
 import StatsByDay from './StatsByDay'
 
-const fetcher = async (url, day) => {
+const fetcher = async url => {
     try {
+        const [, , day] = url.split('/')
         const baseURL = '/api/statsByDay'
         const endpoint = day ? `${baseURL}?day=${day}` : baseURL
 
@@ -18,14 +19,10 @@ const fetcher = async (url, day) => {
 }
 
 export default function StatsWithSWR() {
-    const { asPath, query } = useRouter()
-    const { data } = useSWR([asPath, query?.day], fetcher, {
+    const { asPath } = useRouter()
+    const { data } = useSWR(asPath, fetcher, {
         refreshInterval: 30000, // Check for new data every 30 seconds
     })
-
-    if (!data) {
-        return null
-    }
 
     return <StatsByDay {...data} />
 }

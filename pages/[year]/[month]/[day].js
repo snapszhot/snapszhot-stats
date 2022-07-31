@@ -7,10 +7,10 @@ import supabase from '@lib/supabase-client'
 
 import { StatsByDate } from '@components/views'
 
-export default function DatePage({ fallback, ...props }) {
+export default function DatePage({ fallback }) {
     return (
         <SWRConfig value={{ fallback }}>
-            <StatsByDate {...props} />
+            <StatsByDate />
         </SWRConfig>
     )
 }
