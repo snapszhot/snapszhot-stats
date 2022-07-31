@@ -5,7 +5,7 @@ import ArchivePost from './ArchivePost'
 
 export default function Archive({ posts, ...props }) {
     return (
-        <Layout {...props}>
+        <Layout {...props} pageTitle='Archive'>
             <ul>
                 {posts.map(postGroup =>
                     postGroup.map((post, index) => (
