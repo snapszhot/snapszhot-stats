@@ -16,7 +16,7 @@ HomePage.propTypes = {
     fallback: PropTypes.object,
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
         const fallback = await queryStatsByDay()
 
@@ -26,7 +26,7 @@ export async function getStaticProps() {
                     ['/']: fallback,
                 },
             },
-            revalidate: 60,
+            // revalidate: 60,
         }
     } catch (error) {
         return {
