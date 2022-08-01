@@ -40,7 +40,7 @@
             "tokenRef": "GITHUB_TOKEN"
         },
         "hooks": {
-            "after:bump": "npx auto-changelog -p --template changelog-template.hbs"
+            "after:bump": "npx auto-changelog -p --template changelog-template.hbs --ignore-commit-pattern \"^(Releasing v.*)\""
         },
         "npm": {
             "publish": false
