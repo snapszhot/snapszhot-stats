@@ -14,7 +14,7 @@ export default function Bar({ entry, caption, total }) {
 }
 
 Bar.propTypes = {
-    caption: PropTypes.number,
+    caption: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     entry: PropTypes.number,
     total: PropTypes.number,
 }

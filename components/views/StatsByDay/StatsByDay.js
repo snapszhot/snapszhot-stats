@@ -24,7 +24,7 @@ export default function StatsByDay({
             <BarChart
                 data={stats.winsByFrame}
                 title='Wins by Frame'
-                total={stats.wins}
+                total={stats.totalPlays}
                 xAxis='Frame'
                 yAxis='Wins'
             />
