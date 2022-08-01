@@ -1,10 +1,13 @@
 # Changelog
 
-## [v1.1.4](https://github.com/skilar/snapszhot-stats/compare/v1.1.3...v1.1.4)
+## [v1.1.5](https://github.com/skilar/snapszhot-stats/compare/v1.1.4...v1.1.5)
+
+- Switch to SSR [`151920f`](https://github.com/skilar/snapszhot-stats/commit/151920f6f6bdea6819526cfaf22a850467308a72)
+## [v1.1.4](https://github.com/skilar/snapszhot-stats/compare/v1.1.3...v1.1.4) (31 July 2022)
 
 - Remove BarChart from StatsByDate [`69d0994`](https://github.com/skilar/snapszhot-stats/commit/69d09941dca6172dbb3c16e7af390dea7beb0b82)
+- Releasing v1.1.4 [`a9f566b`](https://github.com/skilar/snapszhot-stats/commit/a9f566bd84d55014c25d2d7752a26cc4ef711762)
 - Update archive posts sort [`66dc0c1`](https://github.com/skilar/snapszhot-stats/commit/66dc0c119d2ab16f9fb5ad621bd5560cf261d122)
-- Add archive page title [`5a168ef`](https://github.com/skilar/snapszhot-stats/commit/5a168ef7f8b859f984a52fd31e3c34cd9f6c01ff)
 ## [v1.1.3](https://github.com/skilar/snapszhot-stats/compare/v1.1.2...v1.1.3) (30 July 2022)
 
 - Fix SWR [`ba08479`](https://github.com/skilar/snapszhot-stats/commit/ba08479513e0a9a072d99299409edec642dc18f5)
