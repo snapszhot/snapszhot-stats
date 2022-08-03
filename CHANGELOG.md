@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.1.6](https://github.com/skilar/snapszhot-stats/compare/v1.1.5...v1.1.6)
+## [v1.1.7](https://github.com/skilar/snapszhot-stats/compare/v1.1.6...v1.1.7)
+
+-   Generate nav on server [`691726a`](https://github.com/skilar/snapszhot-stats/commit/691726a65d845c6738cab3fe45d366da1256eca2)
+-   Switch all pages to SSR [`bbc87d4`](https://github.com/skilar/snapszhot-stats/commit/bbc87d4f059877ba94faa13976132f1b8126fe50)
+-   Bump dependencies [`f4041d9`](https://github.com/skilar/snapszhot-stats/commit/f4041d975953e3278dee0ad0d1e9bf7968481bd8)
+
+## [v1.1.6](https://github.com/skilar/snapszhot-stats/compare/v1.1.5...v1.1.6) (1 August 2022)
 
 -   Bump dependencies [`40c8e9f`](https://github.com/skilar/snapszhot-stats/commit/40c8e9f7adab0396570654bfc6258be9c9cae878)
 -   Show losses in BarChart [`e09db14`](https://github.com/skilar/snapszhot-stats/commit/e09db146b27072116a02171896b932b29ada07e4)
