@@ -26,7 +26,6 @@ export async function getServerSideProps() {
                     ['/']: fallback,
                 },
             },
-            // revalidate: 60,
         }
     } catch (error) {
         return {
