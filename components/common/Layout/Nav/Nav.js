@@ -4,21 +4,17 @@ import { useRouter } from 'next/router'
 import NavIcon from './NavIcon'
 import styles from './Nav.module.scss'
 
-export default function Nav({ day, mostRecentDay }) {
+export default function Nav({ next, previous }) {
     const { pathname } = useRouter()
     const showGameNav = pathname !== '/archive'
-    const prevLink = `/day/${day - 1}`
-    const prevAvailable = day > 1
-    const nextLink = `/day/${day + 1}`
-    const nextAvailable = mostRecentDay > day
 
     return (
         <ul className={styles.nav}>
             {showGameNav && (
                 <>
                     <NavIcon
-                        disabled={!prevAvailable}
-                        link={prevLink}
+                        disabled={!previous.isAvailable}
+                        link={previous.link}
                         title='Previous'
                     >
                         <svg viewBox='0 0 319 511.61'>
@@ -26,8 +22,8 @@ export default function Nav({ day, mostRecentDay }) {
                         </svg>
                     </NavIcon>
                     <NavIcon
-                        disabled={!nextAvailable}
-                        link={nextLink}
+                        disabled={!next.isAvailable}
+                        link={next.link}
                         title='Next'
                     >
                         <svg viewBox='0 0 319 511.61'>
@@ -46,6 +42,6 @@ export default function Nav({ day, mostRecentDay }) {
 }
 
 Nav.propTypes = {
-    day: PropTypes.number,
-    mostRecentDay: PropTypes.number,
+    next: PropTypes.object,
+    previous: PropTypes.object,
 }

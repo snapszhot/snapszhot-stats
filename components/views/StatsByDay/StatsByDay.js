@@ -8,17 +8,11 @@ import {
     RawLogs,
 } from '@components/common'
 
-export default function StatsByDay({
-    day,
-    resultData,
-    stats,
-    subtitle,
-    ...props
-}) {
+export default function StatsByDay({ day, nav, resultData, stats, subtitle }) {
     const pageTitle = `DAY ${day}: ${subtitle}`
 
     return (
-        <Layout day={day} pageTitle={pageTitle} {...props}>
+        <Layout day={day} nav={nav} pageTitle={pageTitle}>
             <PageTitle title={pageTitle} />
             <BasicStats {...stats} />
             <BarChart
@@ -35,6 +29,7 @@ export default function StatsByDay({
 
 StatsByDay.propTypes = {
     day: PropTypes.number,
+    nav: PropTypes.object,
     resultData: PropTypes.array,
     stats: PropTypes.object,
     subtitle: PropTypes.string,

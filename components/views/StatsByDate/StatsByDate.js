@@ -2,15 +2,10 @@ import PropTypes from 'prop-types'
 
 import { BasicStats, Layout, PageTitle, RawLogs } from '@components/common'
 
-export default function StatsByDate({
-    prettyDate,
-    resultData,
-    stats,
-    ...props
-}) {
+export default function StatsByDate({ nav, pageTitle, resultData, stats }) {
     return (
-        <Layout pageTitle={prettyDate} {...props}>
-            <PageTitle title={prettyDate} />
+        <Layout pageTitle={pageTitle} nav={nav}>
+            <PageTitle title={pageTitle} />
             <BasicStats {...stats} />
             <RawLogs resultData={resultData} context='date' />
         </Layout>
@@ -18,9 +13,8 @@ export default function StatsByDate({
 }
 
 StatsByDate.propTypes = {
-    day: PropTypes.number,
-    prettyDate: PropTypes.string,
+    nav: PropTypes.object,
+    pageTitle: PropTypes.string,
     resultData: PropTypes.array,
     stats: PropTypes.object,
-    subtitle: PropTypes.string,
 }

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Nav from './Nav'
 import styles from './Layout.module.scss'
 
-export default function Layout({ children, pageTitle, ...props }) {
+export default function Layout({ children, nav, pageTitle }) {
     const { asPath } = useRouter()
     const isHomepage = asPath === '/'
 
@@ -28,7 +28,7 @@ export default function Layout({ children, pageTitle, ...props }) {
                         </Link>
                     )}
                 </span>
-                <Nav {...props} />
+                <Nav {...nav} />
             </header>
             <main>{children}</main>
         </div>
@@ -37,5 +37,6 @@ export default function Layout({ children, pageTitle, ...props }) {
 
 Layout.propTypes = {
     children: PropTypes.node,
+    nav: PropTypes.object,
     pageTitle: PropTypes.string,
 }
