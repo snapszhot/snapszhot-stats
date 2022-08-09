@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.1.7](https://github.com/skilar/snapszhot-stats/compare/v1.1.6...v1.1.7)
+## [v1.1.8](https://github.com/skilar/snapszhot-stats/compare/v1.1.7...v1.1.8)
+
+-   Bump dependencies [`4a0f868`](https://github.com/skilar/snapszhot-stats/commit/4a0f868c2f3797521923ef478cf5bf98aa8a27d6)
+
+## [v1.1.7](https://github.com/skilar/snapszhot-stats/compare/v1.1.6...v1.1.7) (2 August 2022)
 
 -   Generate nav on server [`691726a`](https://github.com/skilar/snapszhot-stats/commit/691726a65d845c6738cab3fe45d366da1256eca2)
 -   Switch all pages to SSR [`bbc87d4`](https://github.com/skilar/snapszhot-stats/commit/bbc87d4f059877ba94faa13976132f1b8126fe50)
