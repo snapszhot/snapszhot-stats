@@ -10,7 +10,7 @@ export default function Layout({ children, nav, pageTitle }) {
     const { asPath } = useRouter()
     const isHomepage = asPath === '/'
 
-    const siteTitle = 'SNAPSЖOT STATS'
+    const siteTitle = 'STATSЖOT'
     const title = isHomepage ? siteTitle : `${pageTitle} - ${siteTitle}`
 
     return (
