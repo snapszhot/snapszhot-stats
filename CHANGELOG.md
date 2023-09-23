@@ -1,6 +1,11 @@
 # Changelog
 
-## [v1.1.9](https://github.com/snapszhot/snapszhot-stats/compare/v1.1.8...v1.1.9)
+## [v1.2.0](https://github.com/snapszhot/snapszhot-stats/compare/v1.1.9...v1.2.0)
+
+-   Bump dependencies [`35c1b5a`](https://github.com/snapszhot/snapszhot-stats/commit/35c1b5a503450ed287e8178531a4f4597c4b8dff)
+-   Add link to game [`742a566`](https://github.com/snapszhot/snapszhot-stats/commit/742a566171544ca1e1c07a66abb0bd02096821c4)
+
+## [v1.1.9](https://github.com/snapszhot/snapszhot-stats/compare/v1.1.8...v1.1.9) (15 September 2022)
 
 -   Bump dependencies [`97f56f1`](https://github.com/snapszhot/snapszhot-stats/commit/97f56f137a698c6661fb5ca0f6b3b1afe600d863)
 -   Update title [`79183d0`](https://github.com/snapszhot/snapszhot-stats/commit/79183d0e25ebad1f6cacf59a713e838e4accadde)
