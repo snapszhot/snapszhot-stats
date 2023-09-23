@@ -1,0 +1,17 @@
+.link {
+    display: inline-block;
+    font-size: var(--font-size-medium-small);
+    font-weight: var(--font-weight-sans-bold);
+    margin-bottom: var(--spacing-single);
+
+    &::after {
+        border-top: 2px solid var(--color-dark-grey);
+        border-right: 2px solid var(--color-dark-grey);
+        content: '';
+        display: inline-block;
+        height: 8px;
+        margin-left: var(--spacing-sixth);
+        transform: rotate(45deg);
+        width: 8px;
+    }
+}

@@ -7,6 +7,7 @@ import {
     PageTitle,
     RawLogs,
 } from '@components/common'
+import styles from './StatsByDay.module.scss'
 
 export default function StatsByDay({ day, nav, resultData, stats, subtitle }) {
     const pageTitle = `DAY ${day}: ${subtitle}`
@@ -14,6 +15,9 @@ export default function StatsByDay({ day, nav, resultData, stats, subtitle }) {
     return (
         <Layout day={day} nav={nav} pageTitle={pageTitle}>
             <PageTitle title={pageTitle} />
+            <a className={styles.link} href={`https://snapgame.cc/day/${day}`}>
+                Play the game
+            </a>
             <BasicStats {...stats} />
             <BarChart
                 data={stats.winsByFrame}
